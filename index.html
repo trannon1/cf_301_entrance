@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<body onload="displayName()"> 
+<head>
+    <meta charset="utf-8" />
+    <title>TEST</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/home.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<p>
+			<header id="showcase">
+        <h1> Welcome To My Site </h1>
+        <h1 id="showName"></h1>
+			</header>
+      Please enter your name here:
+      <div>
+        <input type="text" id="name" value="" autocomplete="off">
+      </div>
+      <button onclick="storeName()">Enter</button>
+  </p>
+  <p>
+      Would you like to play a game?
+  </p>
+
+<script>
+  function storeName() {
+    sessionStorage.name = document.getElementById("name").value;
+    document.getElementById("showName").innerHTML = sessionStorage.name;
+  }
+
+  function display(){
+    if(sessionStorage.name == undefined){
+      sessionStorage.name = "";
+    }
+    else{
+      document.getElementById("showName").innerHTML = sessionStorage.name;
+    }
+  }
+  </script>
+
+</body>
+</html>
