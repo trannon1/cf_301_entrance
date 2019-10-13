@@ -16,36 +16,44 @@
 </head>
 <body>
 	<p>
-			<header id="showcase">
-        <h1> Welcome To My Site </h1>
-        <h1 id="showName"></h1>
-			</header>
-      Please enter your name here:
-      <div>
-        <input type="text" id="name" value="" autocomplete="off">
+		<header id="showcase">
+      <h1> Welcome To My Site </h1>
+      <h1 id="showName"></h1>
+      <div class="scoreBox"></div>
+		</header>
+      <div class="welcome">
+        <section>
+          Please enter your name here:
+          <input type="text" id="name" value="" autocomplete="off">
+          <button onclick="storeName()">Enter</button>
+        </section>
+        <section>
+          Would you like to play a game?
+          <button onclick="displaygame()">Yes</button>
+          <button onclick="">No</button>
+        </section>
       </div>
-      <button onclick="storeName()">Enter</button>
-  </p>
-  <p>
-      Would you like to play a game?
+
+    <div class='flex-container flex-center'>
+        <div class='messageBox'></div>
+        <button class='reset'>Reset</button>
+    </div>
+    <div class="board-container flex-container flex-column flex-center">
+        <div class="board flex-container flex-wrap flex-center">
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+          <div class="square"></div>
+        </div>
+      </div>
   </p>
 
-<script>
-  function storeName() {
-    sessionStorage.name = document.getElementById("name").value;
-    document.getElementById("showName").innerHTML = sessionStorage.name;
-  }
-
-  function display(){
-    if(sessionStorage.name == undefined){
-      sessionStorage.name = "";
-    }
-    else{
-      document.getElementById("showName").innerHTML = sessionStorage.name;
-    }
-  }
-  </script>
+<script src="js/app.js"></script>
 
 </body>
->>>>>>> b945549b12521643a912111434036d9ede957a43
 </html>

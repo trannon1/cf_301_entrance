@@ -1,9 +1,47 @@
 @import "bootstrap";
 
 /*
- * Base structure
- */
 
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex_column{
+  flex-direction: column;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.flex-center{
+  justify-content: center;
+  align-items: center;
+}
+
+.board-container{
+  height: 100%;
+  width: 100%;
+  display:none;
+}
+
+.board{
+  width: 618px;
+}
+
+.square{
+  height: 200px;
+  width: 200px;
+  border: 3px solid white;
+}
+
+.welcome{
+	display:block;
+} */
+
+html,
 body {
   height: 100%;
   font-family: 'Lato', sans-serif;
@@ -23,7 +61,6 @@ h6, .h6 {
   font-family: 'Roboto Slab', serif;
 }
 
-/* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
   width: 100%;
@@ -41,7 +78,6 @@ h6, .h6 {
   margin-left: auto;
 }
 
-/* Padding for spacing */
 .inner {
   padding: 2rem;
 }
@@ -77,5 +113,69 @@ h6, .h6 {
 	animation: heading;
 	animation-duration: 3s;
 	animation-fill-mode: forwards;
->>>>>>> b945549b12521643a912111434036d9ede957a43
+}
+
+.flex-container {
+    display: none;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.board-container {
+    height: 100%;
+    width: 100%;
+    display: none;
+}
+
+.board {
+    width: 618px;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    /* add below this second */
+    border: 3px solid black;
+    font-size: 56px;
+}
+
+.welcome{
+	display:block;
+}
+
+/* make x's and o's two different colors through javascript */
+
+.square:hover {
+    background: floralwhite;
+    cursor: pointer;
+}
+
+.messageBox {
+    display: none;
+    padding: 10px;
+    font-size: 32px;
+    color: royalblue;
+}
+
+.scoreBox {
+  display: none;
+  padding: 10px;
+  font-size: 32px;
+  color: royalblue;
+}
+
+.reset {
+    padding: 10px;
+    margin: 10px
 }
